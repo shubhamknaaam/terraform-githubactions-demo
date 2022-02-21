@@ -35,16 +35,23 @@ This repository contains Terraform configuration and Github Action workflow
 .
 ├── README.md
 └── .github/workflows
-    ├── terraform-workflow.yml
-└── terraform
-    ├── backend.tf
-    ├── dns.tf
-    ├── main.tf
-    ├── network.tf
-    ├── output.tf
-    ├── provider.tf
-    ├── variables.tf
-    └── vm.tf
+|   └── terraform-workflow.yml
+├── terraform
+│   ├── backend.tf
+│   ├── dns.tf
+│   ├── main.tf
+│   ├── network.tf
+│   ├── output.tf
+│   ├── provider.tf
+│   ├── terraform.tfvars
+│   ├── variables.tf
+│   └── vm.tf
+└── variables
+    ├── dev
+    │   └── backend.tfvars
+    └── uat
+        └── backend.tfvars
+
 ```
 *	GitHUb
 		Branching Strategy 			
