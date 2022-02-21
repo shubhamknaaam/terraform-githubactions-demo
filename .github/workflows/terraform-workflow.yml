@@ -4,14 +4,13 @@ on:
   push:
     branches:
     - main
-    - develop
     paths:
     - terraform/**
   pull_request:
 
 jobs:
   terraform:
-    name: 'Terraform Action'
+    name: 'Terraform'
     env:
       ARM_CLIENT_ID: ${{ secrets.AZURE_AD_CLIENT_ID }}
       ARM_CLIENT_SECRET: ${{ secrets.AZURE_AD_CLIENT_SECRET }}
