@@ -57,8 +57,8 @@ variable "address_space" {
 
 variable "address_prefix" {
   description = "subnet range / mask"
-  type        = string
-  default     = "192.168.0.0/24"
+  type        = list(any)
+  default     = ["192.168.0.0/24"]
 }
 
 # Standards Maps
