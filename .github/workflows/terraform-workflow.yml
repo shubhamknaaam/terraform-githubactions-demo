@@ -83,12 +83,3 @@ jobs:
         tf_actions_version: ${{ env.tfa_version }}
         tf_actions_subcommand: 'output'
         tf_actions_working_dir: "./terraform"
-    - name: 'Use Terraform Output'
-      run: |
-        public-ip="ip"
-        echo ${{ steps.terraform.outputs.tf_actions_output  }}
-    - name: 'Public IP of VM'
-      run: |
-        apt-get install jq
-        PUBLIC_IP=$(echo ${{ steps.terraform.outputs.tf_actions_output }} | jq -r '.public-ip.value')
-        echo $PUBLIC_IP
