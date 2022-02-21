@@ -84,7 +84,9 @@ jobs:
         tf_actions_subcommand: 'output'
         tf_actions_working_dir: "./terraform"
     - name: 'Use Terraform Output'
-      run: echo ${{ steps.terraform.outputs.tf_actions_output  }}
+      run: |
+        echo 'Hello User'
+        echo ${{ steps.terraform.outputs.tf_actions_output  }}
     - name: 'Public IP of VM'
       run: |
         apt-get install jq
