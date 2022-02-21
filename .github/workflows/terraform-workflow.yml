@@ -79,7 +79,7 @@ jobs:
     - name: 'Terraform Output'
       id: terraform
       uses: hashicorp/terraform-github-actions@master
-        with:
+      with:
         tf_actions_version: ${{ env.tfa_version }}
         tf_actions_subcommand: 'output'
         tf_actions_working_dir: "./terraform"
