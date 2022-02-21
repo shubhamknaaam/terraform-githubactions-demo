@@ -86,3 +86,9 @@ jobs:
     
     - name: 'Use Terraform Output'
       run: echo ${{ steps.terraform.outputs.tf_actions_output  }}
+
+    - name: 'Public IP of VM'
+        run: |
+          apt-get install jq
+          PUBLIC_IP=$(echo ${{ steps.terraform.outputs.tf_actions_output }} | jq -r '.public-ip.value')
+          echo $PUBLIC_IP
