@@ -15,7 +15,7 @@ variable "vm_size" {
 
 variable "comp_name" {
   type    = string
-  default = "devops-demovm2"
+  default = "devops-demovm3"
 }
 
 variable "admin_username" {
