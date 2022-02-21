@@ -18,7 +18,7 @@ jobs:
       ARM_TENANT_ID: ${{ secrets.AZURE_AD_TENANT_ID }}
       tf_actions_working_dir: './terraform'
       tfa_version: 0.14.8
-      WORKSPACE: uat
+      TF_WORKSPACE: uat
 
     runs-on: ubuntu-latest
     defaults:
@@ -74,4 +74,4 @@ jobs:
         tf_actions_working_dir: "./terraform"
         args: '-backend-config="../variables/uat/backend.tfvars" -var-file="./terraform.tfvars"'
       env:
-        TF_WORKSPACE: ${{ env.WORKSPACE }}
+        TF_WORKSPACE: ${{ env.TF_WORKSPACE }}
